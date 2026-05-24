@@ -1,0 +1,102 @@
+.drawer-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: 100;
+  animation: fadeIn 0.2s ease;
+}
+.drawer {
+  position: fixed;
+  top: 0; right: 0;
+  height: 100vh;
+  width: 100%;
+  max-width: 420px;
+  background: var(--surface);
+  z-index: 101;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-md);
+  animation: slideIn 0.25s ease;
+}
+@keyframes fadeIn { from {opacity:0} to {opacity:1} }
+@keyframes slideIn { from {transform:translateX(100%)} to {transform:translateX(0)} }
+
+.drawer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--line);
+}
+.drawer-title {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  margin: 0;
+}
+.drawer-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px 24px;
+}
+.drawer-footer {
+  border-top: 1px solid var(--line);
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.cart-empty {
+  text-align: center;
+  color: var(--ink-soft);
+  padding: 60px 0;
+}
+.cart-item {
+  display: grid;
+  grid-template-columns: 70px 1fr auto;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--line);
+}
+.cart-item img {
+  width: 70px; height: 90px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+.cart-item-info { display: flex; flex-direction: column; gap: 4px; }
+.cart-item-name { font-size: 0.95rem; font-weight: 500; margin: 0; }
+.cart-item-brand { font-size: 0.75rem; color: var(--ink-soft); }
+.qty-controls {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  width: fit-content;
+  margin-top: 6px;
+}
+.qty-controls button {
+  background: transparent; border: none;
+  width: 28px; height: 28px;
+}
+.qty-controls span { padding: 0 8px; font-size: 0.85rem; }
+.cart-item-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+.cart-remove {
+  background: none;
+  border: none;
+  color: var(--ink-soft);
+  font-size: 0.75rem;
+  text-decoration: underline;
+  padding: 0;
+}
+.cart-total {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  font-size: 1.1rem;
+}

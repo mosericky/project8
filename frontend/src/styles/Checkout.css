@@ -1,0 +1,198 @@
+.checkout-form {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.field label {
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-soft);
+}
+.field input {
+  padding: 11px 14px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  background: var(--surface);
+}
+.field input:focus { outline: none; border-color: var(--ink); }
+
+.payment-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.payment-option {
+  border: 1px solid var(--line);
+  padding: 14px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  text-align: center;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.2s;
+  background: var(--surface);
+}
+.payment-option.selected {
+  border-color: var(--ink);
+  background: var(--ink);
+  color: var(--bg);
+}
+
+.map-container {
+  height: 260px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--line);
+}
+.map-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 14px;
+}
+.map-actions .btn-outline {
+  border-color: rgba(0, 0, 0, 0.08);
+  color: var(--ink);
+  background: transparent;
+}
+.delivery-pin-icon {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  width: 28px;
+  height: 42px;
+}
+.delivery-pin {
+  width: 24px;
+  height: 24px;
+  background: linear-gradient(180deg, #ff7d90 0%, #ff415e 100%);
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg);
+  position: relative;
+  box-shadow: 0 16px 24px rgba(0, 0, 0, 0.26);
+}
+.delivery-pin::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 10px;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: inset 0 0 0 4px rgba(255, 255, 255, 0.16);
+}
+.map-hint {
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+  margin-top: 4px;
+}
+
+.checkout-summary {
+  background: var(--surface-2);
+  color: var(--ink);
+  padding: 14px 16px;
+  border-radius: var(--radius);
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+}
+
+.success-state {
+  padding: 48px 24px;
+  text-align: center;
+}
+.success-state h3 {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  margin: 12px 0;
+}
+.success-state p { color: var(--ink-soft); }
+
+.checkout-error {
+  background: color-mix(in srgb, #d33 12%, transparent);
+  color: #b00020;
+  border: 1px solid #d33;
+  padding: 10px 12px;
+  border-radius: 6px;
+  font-size: 0.88rem;
+}
+.spin { animation: spin 1s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.ck-head-left { display: flex; align-items: center; gap: 8px; }
+.ck-lead {
+  display: flex; align-items: center; gap: 8px;
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+  margin: 0;
+}
+.ck-choice-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.ck-choice {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  padding: 18px 16px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--ink);
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.2s;
+  font-family: inherit;
+}
+.ck-choice:hover { border-color: var(--ink-soft); }
+.ck-choice strong { font-size: 1rem; font-weight: 600; }
+.ck-choice span { font-size: 0.8rem; color: var(--ink-soft); }
+.ck-choice.selected {
+  border-color: var(--ink);
+  background: var(--ink);
+  color: var(--bg);
+}
+.ck-choice.selected span { color: var(--bg); opacity: 0.75; }
+
+.ck-card-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 12px;
+}
+
+.ck-wait-timer {
+  font-family: var(--font-display);
+  font-size: 2.4rem;
+  margin: 16px 0 8px;
+  color: var(--ink);
+}
+.ck-wait-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+.btn-ghost {
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid var(--line);
+}
+
+.checkout-error {
+  display: flex; align-items: center; gap: 6px;
+}
+

@@ -1,0 +1,351 @@
+.auth-page {
+  min-height: calc(100vh - 90px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  background: #0f1222;
+}
+
+.auth-card {
+  width: min(920px, 100%);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  align-items: stretch;
+}
+
+.auth-hero,
+.auth-panel {
+  padding: 36px 28px;
+  border-radius: 8px;
+  background: linear-gradient(180deg,#161524 0%, #1b1930 100%);
+  color: #fff;
+  box-shadow: 0 6px 20px rgba(7,8,20,0.6);
+}
+
+.auth-hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 18px;
+}
+
+.auth-heading {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  margin: 0;
+  color: #ffffff;
+}
+
+.eyebrow {
+  margin: 0 0 6px;
+  text-transform: none;
+  font-size: 1.05rem;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.auth-text {
+  color: rgba(255,255,255,0.68);
+  margin: 0;
+}
+
+.auth-note {
+  margin-top: 6px;
+  color: rgba(255,255,255,0.42);
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.02);
+  padding: 10px 12px;
+  border-radius: 10px;
+  font-size: 0.9rem;
+}
+
+.auth-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.auth-form {
+  display: grid;
+  gap: 18px;
+  max-width: 420px;
+}
+
+.profile-avatar-row {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+
+.profile-avatar-preview {
+  width: 30px;
+  height: 30px;
+  border-radius: 24px;
+  overflow: hidden;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.08);
+  display: grid;
+  place-items: center;
+}
+
+.profile-avatar-preview img {
+  width: 30%;
+  height: 30%;
+  object-fit: cover;
+}
+
+.profile-avatar-placeholder {
+  color: rgba(255,255,255,0.6);
+  font-size: 0.82rem;
+  text-align: center;
+  padding: 8px;
+}
+
+.profile-avatar-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.upload-label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 18px;
+  border-radius: 999px;
+  background: linear-gradient(90deg,#ff6b87 0%, #ff4f6a 100%);
+  color: #fff;
+  cursor: pointer;
+  font-weight: 700;
+  position: relative;
+}
+
+.upload-label input {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.profile-hint {
+  margin: 0;
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.72);
+}
+
+.field textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.field textarea,
+.field input {
+  width: 100%;
+  border: 1px solid rgba(255,95,120,0.14);
+  border-radius: 999px;
+  padding: 14px 18px;
+  background: rgba(255,255,255,0.03);
+  color: #fff;
+  font: inherit;
+  outline: none;
+  transition: box-shadow 0.15s, border-color 0.15s;
+}
+
+.field label {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.72);
+}
+
+.field input,
+.field textarea {
+  width: 100%;
+  border: 1px solid rgba(255,95,120,0.14);
+  border-radius: 999px;
+  padding: 14px 18px;
+  background: rgba(255,255,255,0.03);
+  color: #fff;
+  font: inherit;
+  outline: none;
+  transition: box-shadow 0.15s, border-color 0.15s;
+}
+
+.field input::placeholder {
+  color: rgba(255,255,255,0.28);
+}
+
+.field input:focus {
+  border-color: rgba(255,95,120,0.9);
+  box-shadow: 0 6px 18px rgba(255,95,120,0.06);
+}
+
+.password-input-wrapper {
+  position: relative;
+}
+
+.password-toggle {
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  transform: translateY(-50%);
+  padding: 0 10px;
+  border: none;
+  background: transparent;
+  color: rgba(255,255,255,0.75);
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.password-toggle:hover {
+  color: #ff8ba3;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 36px;
+  border-radius: 999px;
+  background: linear-gradient(90deg,#ff6b87 0%, #ff4f6a 100%);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  box-shadow: 0 6px 24px rgba(255,80,100,0.12);
+}
+
+.btn.btn-outline {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.08);
+  color: rgba(255,255,255,0.9);
+  box-shadow: none;
+}
+
+.auth-link {
+  color: rgba(255,95,120,0.95);
+  cursor: pointer;
+  font-weight: 600;
+  background: transparent;
+  border: none;
+}
+
+.auth-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.auth-error {
+  color: #ffd7d9;
+  background: rgba(255, 90, 110, 0.06);
+  border: 1px solid rgba(255,90,110,0.12);
+  padding: 10px 12px;
+  border-radius: 10px;
+}
+
+.auth-success {
+  color: #dff7e6;
+  background: rgba(40,180,120,0.06);
+  border: 1px solid rgba(40,180,120,0.12);
+  padding: 10px 12px;
+  border-radius: 10px;
+}
+
+/* ── Profile avatar hero ── */
+.profile-avatar-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.profile-avatar-hero {
+  width: 104px;
+  height: 104px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: rgba(255,255,255,0.06);
+  border: 2px solid rgba(255,95,120,0.3);
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  flex-shrink: 0;
+}
+
+.profile-avatar-hero:hover {
+  border-color: rgba(255,95,120,0.8);
+  box-shadow: 0 0 0 4px rgba(255,95,120,0.12);
+}
+
+.profile-avatar-hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-avatar-hero-placeholder {
+  color: rgba(255,255,255,0.45);
+  font-size: 0.75rem;
+  text-align: center;
+  padding: 10px;
+  line-height: 1.4;
+}
+
+.avatar-change-hint {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0,0,0,0.55);
+  color: #fff;
+  font-size: 0.68rem;
+  font-weight: 600;
+  text-align: center;
+  padding: 5px 0;
+  opacity: 0;
+  transition: opacity 0.18s;
+  pointer-events: none;
+}
+
+.profile-avatar-hero:hover .avatar-change-hint {
+  opacity: 1;
+}
+
+/* Save / Cancel row that appears after a new photo is chosen */
+.avatar-save-actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.avatar-btn-save,
+.avatar-btn-cancel {
+  padding: 8px 18px;
+  font-size: 0.8rem;
+}
+
+/* Small social icons row (if you add icons in future) */
+.social-row {
+  display:flex;
+  gap:12px;
+  justify-content:flex-start;
+  margin-top:12px;
+}
+
+@media (max-width: 920px) {
+  .auth-card { grid-template-columns: 1fr; gap: 16px; }
+  .auth-hero, .auth-panel { padding: 24px; }
+  .auth-heading { font-size: 1.6rem }
+}
+
