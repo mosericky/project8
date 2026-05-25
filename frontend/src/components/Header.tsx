@@ -32,7 +32,7 @@ const Header = ({ onCartClick, onCategoryClick, activeCategory }: Props) => {
     <header className="header">
       <div className="header-inner">
         <a href="#top" className="brand">
-          amm<span>_</span>clothing<span>_</span>store
+          amm<span>_</span>styles
         </a>
         <nav className="nav-links">
           {NAV.map((item) => {
