@@ -58,10 +58,10 @@ const Contact = () => {
               target="_blank"
               rel="noreferrer"
             >
-              <MessageCircle size={20} /> WhatsApp · 0791 473 580
+              <MessageCircle size={20} /> WhatsApp · 
             </a>
             <a className="contact-link" href="tel:+254791473580">
-              <Phone size={20} /> Call · +254 791 473 580
+              <Phone size={20} /> Call · 
             </a>
             <a
               className="contact-link"
