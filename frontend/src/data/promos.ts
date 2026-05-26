@@ -1,7 +1,7 @@
 import { Product } from "./products";
 
 // Edit this to set when the promo ends. ISO 8601 format.
-export const PROMO_END_DATE = "2026-05-16T23:59:59+03:00";
+export const PROMO_END_DATE = "2026-06-01T23:59:59+03:00";
 
 export interface PromoProduct extends Product {
   originalPrice: number;
